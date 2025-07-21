@@ -1,0 +1,26 @@
+======= Landing Page =======
+Warna Background = bg-[#1E3A8A]
+Warna Text (bold) = text-[#06003F]
+Warna Text (normal) = text-[#000000]
+Warna Button = bg-[#090445]
+
+======= Admin =======
+Background Login = bg-[#06003F]
+Background Sidebar = bg-[#06003F]
+Background Search = bg-[#BAC5DB]
+
+======= Voices ======
+Indonesia
+1. id-ID | id-ID-Standard-A | FEMALE
+2. id-ID | id-ID-Standard-B | MALE
+
+English (US)
+1. en-US | en-US-Standard-A	| MALE
+2. en-US | en-US-Standard-C	| FEMALE
+
+======== Voice Settings ========
+| Field         | Allowed Range                  | Default      | Description                         |
+| ------------- | ------------------------------ | ------------ | ----------------------------------- |
+| audioEncoding | MP3, LINEAR16, OGG\_OPUS, etc. | MP3 (common) | Output audio format                 |
+| speakingRate  | 0.25 to 4.0                    | 1.0          | Speed of speech (1.0 = normal)      |
+| pitch         | -20.0 to 20.0                  | 0.0          | Voice pitch adjustment in semitones |
