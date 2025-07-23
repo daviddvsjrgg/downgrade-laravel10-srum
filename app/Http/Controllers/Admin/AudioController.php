@@ -190,15 +190,10 @@ class AudioController extends Controller
             'audioConfig.pitch' => 'nullable|numeric',
         ]);
 
-        $credentialsPath = storage_path('app/credentials-tts.json');
-
-        // Check if the credentials file exists. If not, write it from base64 env.
-        if (!file_exists($credentialsPath) && env('GOOGLE_CLOUD_KEY_BASE64')) {
-            file_put_contents($credentialsPath, base64_decode(env('GOOGLE_CLOUD_KEY_BASE64')));
-        }
+        $keyFilePath = public_path('images/credentials-tts.json');
 
         $client = new TextToSpeechClient([
-            'credentials' => $credentialsPath,
+            'credentials' => $keyFilePath,
         ]);
 
         try {
