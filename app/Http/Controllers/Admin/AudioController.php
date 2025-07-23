@@ -190,10 +190,10 @@ class AudioController extends Controller
             'audioConfig.pitch' => 'nullable|numeric',
         ]);
 
-        $keyFilePath = public_path('images/credentials-tts.json');
+        $credentials = json_decode(env('GOOGLE_APPLICATION_JSON'), true);
 
         $client = new TextToSpeechClient([
-            'credentials' => $keyFilePath,
+            'credentials' => $credentials,
         ]);
 
         try {
